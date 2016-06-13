@@ -1,0 +1,23 @@
+group 'com.alexeychurchill.led-progressbar'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.11'
+    compile files('libs/fxled-1.1.jar')
+}
+
+task (runDemo, dependsOn: 'classes', type: JavaExec) {
+    main = 'Demo'
+    classpath = sourceSets.main.runtimeClasspath
+}
+
+jar {
+    exclude ('Demo.class')
+    exclude ('sampleStylesheet.css')
+}

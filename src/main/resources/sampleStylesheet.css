@@ -1,0 +1,6 @@
+.ledprogressbar .led {
+    -led-on-color: #fa5371;
+    -led-off-color: #8c3536;
+    -led-background-color: #868686;
+    -led-size: 0.9;
+}
